@@ -1,0 +1,13 @@
+.element__info-button {
+    outline: none;
+    background-color: #ffffff;
+    border: 0;
+    min-height: 22px;
+    min-width: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.element__info-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

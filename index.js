@@ -1,35 +1,28 @@
-const popup = document.querySelector('.popup');
-const editButton = document.querySelector('.profile__edit-button');
-const nameInput = document.querySelector('.profile__title');
-const jobInput = document.querySelector('.profile__subtitle');
-const formName = document.querySelector('.popup__input_name');
-const formJob = document.querySelector('.popup__input_job');
-const popupEditForm = document.querySelector('.popup__container');
-function edit () {
-    popup.classList.add('popup__opened');
-    formName.value = nameInput.textContent;
-    formJob.value = jobInput.textContent;
-}
-editButton.addEventListener('click', edit);
+const popup = document.querySelector(".popup");
+const editButton = document.querySelector(".profile__edit-button");
+const title = document.querySelector(".profile__title");
+const subtitle = document.querySelector(".profile__subtitle");
+const nameInput = document.getElementById("popup-input-name");
+const jobInput = document.getElementById("popup-input-job");
+const closeButton = document.querySelector(".popup__close-button");
+const formButton = document.querySelector(".popup__form-button");
 
-const popupClose = document.querySelector('.popup__close');
-function closePopup () {
-    popup.classList.remove('popup__opened')
-}
-popupClose.addEventListener('click', closePopup);
+editButton.addEventListener("click", function (event) {
+    popup.classList.add("popup__opened");
+    nameInput.value = title.textContent;
+    jobInput.value = subtitle.textContent;
+});
 
+closeButton.addEventListener("click", function (event) {
+    popup.classList.remove("popup__opened");
+});
 
-const popupSave = document.querySelector('.popup__button');
+formButton.addEventListener("click", function (event) {
+    title.textContent = nameInput.value;
+    subtitle.textContent = jobInput.value;
+    popup.classList.remove("popup__opened");
+});
 
-    function savePopup(evt) {
-        evt.preventDefault();
-        nameInput.textContent = formName.value;
-        jobInput.textContent = formJob.value;
-        closePopup();
-    }
-    
-
-popupSave.addEventListener('click', savePopup);
 
 
 

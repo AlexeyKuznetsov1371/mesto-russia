@@ -1,14 +1,11 @@
 .profile__edit-button {
-    border: 1px solid #FFFFFF;
-    padding: 7px;
-    background-image: url(../../../images/editor.svg);
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position: center;
+    outline: none;
+    background-color: #000000;
+    border: 1px solid #ffffff;
     min-width: 24px;
     min-height: 24px;
     transition: 0.3s ease-in-out;
-    margin-top: 20px;
+    font-size: 0;
 }
 
 .profile__edit-button:hover {
@@ -16,10 +13,11 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .profile__edit-button {
         min-width: 18px;
-        min-height: 18px;
+        max-height: 18px;
         margin: 0;
+        margin-left: 10px;
     }
 }

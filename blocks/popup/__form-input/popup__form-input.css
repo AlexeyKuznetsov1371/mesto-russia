@@ -1,0 +1,20 @@
+.popup__form-input {
+    outline: none;
+    background-color: #ffffff;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 13px;
+    margin: 0 auto 30px;
+    height: 27px;
+    box-sizing: border-box;
+    width: 100%;
+    color: #000000;
+}
+
+.popup__form-input:last-child {
+    margin-bottom: 48px;
+}

@@ -1,12 +1,14 @@
 .footer {
-    max-width: 880px;
-    margin: 67px auto 0 auto;
+    margin: 67px 200px 60px 200px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
     .footer {
-        max-width: 282px;
-        margin-bottom: 36px;
-        margin-top: 48px;
+        margin: 67px 19px 60px 19px;
     }
 }
