@@ -3,6 +3,11 @@
     font-weight: 400;
     line-height: 22px;
     text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 336px;
+    margin: 0;
 }
 
 
