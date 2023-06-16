@@ -20,7 +20,6 @@ function closePopup () {
 closePopupButton.addEventListener("click", closePopup); 
 
 
-
 formElement.addEventListener("submit", function (event) {
     event.preventDefault();
     title.textContent = nameInput.value; 
