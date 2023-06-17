@@ -15,6 +15,13 @@
     color: #000000;
 }
 
-.popup__form-input:last-child {
+.popup__form-input:last-of-type {
     margin-bottom: 48px;
+}
+
+
+@media screen and (max-width: 1024px) { 
+    .popup__form-input:last-of-type {
+        margin-bottom: 45px;
+    }
 }

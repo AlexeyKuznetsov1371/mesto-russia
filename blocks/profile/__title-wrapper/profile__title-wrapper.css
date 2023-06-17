@@ -8,6 +8,6 @@
 @media screen and (max-width: 1024px) {
     
     .profile__title-wrapper {
-        margin-bottom: 14;
+        margin-bottom: 14px;
     }
 }
