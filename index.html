@@ -25,54 +25,64 @@
                 </div>
                 <button class="profile__add-button" type="button"><img src="images/Plus.svg" alt="Добавить"></button>
             </section>
-            <section class="elements">
-                
-            </section>
+            <section class="elements"></section>
         </main>
         <footer class="footer">
             <p class="footer__text" lang="en">© 2023 Mesto Russia</p>
         </footer>
         <div class="popup">
-                <div class="popup__content">
-                    <h2 class="popup__title">Редактировать профиль</h2>
-                    <form class="popup__form" name="popupForm">
-                        <input class="popup__form-input" id="popup-input-name" type="text" name="username" placeholder="Имя">
-                        <input class="popup__form-input" id="popup-input-job" type="text" name="job" placeholder="О себе">
-                        <button class="popup__form-button" type="submit">Сохранить</button>
-                    </form>
-                    <button class="popup__close-button" type="button"></button>
+            <div class="popup__content">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <form class="popup__form" name="popupForm">
+                    <input class="popup__form-input" id="popup-input-name" type="text" name="username" placeholder="Имя">
+                    <input class="popup__form-input" id="popup-input-job" type="text" name="job" placeholder="О себе">
+                    <button class="popup__form-button" type="submit">Сохранить</button>
+                </form>
+                <button class="popup__close-button" type="button"></button>
+            </div>
+        </div>
+        <div class="popup popup_type_add-cards">
+            <div class="popup__content">
+                <h2 class="popup__title">Новое место</h2>
+                <form class="popup__form popup__form_card" name="popupForm">
+                    <input
+                        class="popup__form-input"
+                        id="popup-input-card-name"
+                        type="text"
+                        name="username"
+                        placeholder="Название"
+                    />
+                    <input
+                        class="popup__form-input"
+                        id="popup-input-card-link"
+                        type="text"
+                        name="job"
+                        placeholder="Ссылка на картинку"
+                    />
+                    <button class="popup__form-button" id="popup-add-card-button" type="submit">Создать</button>
+                </form>
+                <button class="popup__close-button popup__close_button-cards" type="button"></button>
+            </div>
+        </div>
+        <div class="popup popup_type_card-image">
+            <div class="popup__content popup__content-image">
+                <button class="popup__close-button popup__close_button-image" type="button"></button>
+                <img src="#" alt="Картинка" class="popup__image-container">
+                <h2 class="popup__title-image"></h2>
+            </div>
+        </div>
+        <template id="elements-cards">
+            <div class="element">
+                <div class="element__container">
+                <img class="element__image" src="#" alt="Картинка">
+                <button class="element__delete" type="button"></button>
+                </div>
+                <div class="element__info">
+                    <h2 class="element__info-text"></h2>
+                    <button class="element__info-button" type="button"></button>
                 </div>
             </div>
-            <div class="popup popup_type_add-cards">
-                <div class="popup__content">
-                    <h2 class="popup__title">Новое место</h2>
-                    <form class="popup__form" name="popupForm">
-                        <input class="popup__form-input" id="popup-input-name" type="text" name="username" placeholder="Название">
-                        <input class="popup__form-input" id="popup-input-job" type="text" name="job" placeholder="Ссылка на картинку">
-                        <button class="popup__form-button" type="submit">Создать</button>
-                    </form>
-                    <button class="popup__close-button popup__close_button-cards" type="button"></button>
-                </div>
-            </div>
-            <div class="popup popup_type_card-image">
-                <div class="popup__content">
-                    <button class="popup__close_button-image" type="button"></button>
-                    <img src="#" alt="Картинка" class="popup__content-image">
-                    <h2 class="popup__title"></h2>
-                </div>
-            </div>
-            <template id="elements-cards">
-                <div class="element">
-                    <img class="element__image" src="#" alt="Картинка">
-                    <button class="element__delete" type="button"></button>
-                    <div class="element__info">
-                        <h2 class="element__info-text">Карачаевск</h2>
-                        <button class="element__info-button" type="button">
-                            <img src="images/Like.svg" alt="Нравится">
-                        </button>
-                    </div>
-                </div>
-            </template>
+        </template>
         <script src="./scripts/index.js"></script>
     </body>
 </html>
