@@ -30,12 +30,12 @@
         <footer class="footer">
             <p class="footer__text" lang="en">© 2023 Mesto Russia</p>
         </footer>
-        <div class="popup">
+        <div class="popup popup_type_edit-card">
             <div class="popup__content">
                 <h2 class="popup__title">Редактировать профиль</h2>
-                <form class="popup__form" name="popupForm">
-                    <input class="popup__form-input" id="popup-input-name" type="text" name="username" placeholder="Имя">
-                    <input class="popup__form-input" id="popup-input-job" type="text" name="job" placeholder="О себе">
+                <form class="popup__form popup__form_edit" name="popupForm">
+                    <input class="popup__form-input popup__form-input-name" id="popup-input-name" type="text" name="username" placeholder="Имя" required>
+                    <input class="popup__form-input popup__form-input-job" id="popup-input-job" type="text" name="job" placeholder="О себе" required>
                     <button class="popup__form-button" type="submit">Сохранить</button>
                 </form>
                 <button class="popup__close-button" type="button"></button>
@@ -51,13 +51,15 @@
                         type="text"
                         name="username"
                         placeholder="Название"
+                        required
                     >
                     <input
                         class="popup__form-input"
                         id="popup-input-card-link"
-                        type="text"
+                        type="url"
                         name="job"
                         placeholder="Ссылка на картинку"
+                        required
                     >
                     <button class="popup__form-button" id="popup_add_card-button" type="submit">Создать</button>
                 </form>
