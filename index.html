@@ -32,10 +32,12 @@
         </footer>
         <div class="popup popup_type_edit-card">
             <div class="popup__content">
-                <h2 class="popup__title">Редактировать профиль</h2>
                 <form class="popup__form popup__form_edit" name="popupForm">
-                    <input class="popup__form-input popup__form-input-name" id="popup-input-name" type="text" name="username" placeholder="Имя" required>
-                    <input class="popup__form-input popup__form-input-job" id="popup-input-job" type="text" name="job" placeholder="О себе" required>
+                    <h2 class="popup__title">Редактировать профиль</h2>
+                    <input class="popup__form-input popup__form-input-name " id="popup-input-name" type="text" name="username" placeholder="Имя" required minlength="2" maxlength="40">
+                    <span id="popup-input-name-error" class="popup__error"></span>
+                    <input class="popup__form-input popup__form-input-job " id="popup-input-job" type="text" name="job" placeholder="О себе" required minlength="2" maxlength="200">
+                    <span id="popup-input-job-error" class="popup__error"></span>
                     <button class="popup__form-button" type="submit">Сохранить</button>
                 </form>
                 <button class="popup__close-button" type="button"></button>
@@ -43,8 +45,8 @@
         </div>
         <div class="popup popup_type_add-cards">
             <div class="popup__content">
-                <h2 class="popup__title">Новое место</h2>
                 <form class="popup__form popup__form_card" name="popupForm">
+                    <h2 class="popup__title">Новое место</h2>
                     <input
                         class="popup__form-input"
                         id="popup-input-card-name"
@@ -53,6 +55,7 @@
                         placeholder="Название"
                         required
                     >
+                    <span id="popup-input-card-name-error" class="popup__error"></span>
                     <input
                         class="popup__form-input"
                         id="popup-input-card-link"
@@ -61,13 +64,14 @@
                         placeholder="Ссылка на картинку"
                         required
                     >
+                    <span id="popup-input-card-link-error" class="popup__error"></span>
                     <button class="popup__form-button" id="popup_add_card-button" type="submit">Создать</button>
                 </form>
                 <button class="popup__close-button" type="button"></button>
             </div>
         </div>
         <div class="popup popup_type_card-image">
-            <div class="popup__content popup__content-image">
+            <div class="popup__content-image">
                 <button class="popup__close-button" type="button"></button>
                 <img src="#" alt="Картинка" class="popup__image-container">
                 <h2 class="popup__title-image"></h2>
@@ -85,6 +89,8 @@
                 </div>
             </div>
         </template>
-        <script src="./scripts/index.js"></script>
+        <script src="./scripts/initialCards.js" type="module"></script>
+        <script src="./scripts/validate.js"></script>
+        <script src="./scripts/index.js" type="module"></script>
     </body>
 </html>

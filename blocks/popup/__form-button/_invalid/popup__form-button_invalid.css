@@ -1,0 +1,6 @@
+.popup__form-button_invalid {
+    opacity: 0.2;
+    background: none;
+    border: 1px solid;
+    color: #000000;
+}
