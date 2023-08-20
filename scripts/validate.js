@@ -17,19 +17,11 @@ const checkInputValidity = (formElement, inputElement, submitButton, inputArray,
       hideInputError(formElement, inputElement, inputErrorClass, errorClass);
     }
     if (inputArray.some((input) => !input.validity.valid)) {
-<<<<<<< HEAD
-      // submitButton.disabled = "disabled";
-      submitButton.setAttribute("disabled", true);
-    } else {
-      // submitButton.disabled = false;
-      submitButton.removeAttribute("disabled");
-=======
         submitButton.setAttribute("disabled", true);
         submitButton.classList.add(inactiveButtonClass);
     } else {
         submitButton.removeAttribute("disabled");
         submitButton.classList.remove(inactiveButtonClass);
->>>>>>> 89386144cf907973f78a429894a3a54c24c3a8f8
     }
   };
 
