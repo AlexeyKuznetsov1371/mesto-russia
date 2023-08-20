@@ -10,24 +10,26 @@ const showInputError = (formElement, inputElement, errorMessage, inputErrorClass
     inputElement.classList.remove(inputErrorClass);
   };
 
-const checkInputValidity = (formElement, inputElement, submitButton, inputArray, inactiveButtonClass, inputErrorClass, errorClass) => {
+const checkInputValidity = (formElement, inputElement, submitButton, inputArray, inputErrorClass, errorClass) => {
     if (!inputElement.validity.valid) {
       showInputError(formElement, inputElement, inputElement.validationMessage, inputErrorClass, errorClass);
     } else {
       hideInputError(formElement, inputElement, inputErrorClass, errorClass);
     }
     if (inputArray.some((input) => !input.validity.valid)) {
-        submitButton.classList.add(inactiveButtonClass);
+      // submitButton.disabled = "disabled";
+      submitButton.setAttribute("disabled", true);
     } else {
-        submitButton.classList.remove(inactiveButtonClass);
+      // submitButton.disabled = false;
+      submitButton.removeAttribute("disabled");
     }
   };
 
-const setEventListeners = (formElement, submitButton, inputSelector, inactiveButtonClass, inputErrorClass, errorClass) => {
+const setEventListeners = (formElement, submitButton, inputSelector, inputErrorClass, errorClass) => {
     const inputList = Array.from(formElement.querySelectorAll(inputSelector));
     inputList.forEach((inputElement, index, inputArray) => {
       inputElement.addEventListener('input', function () {
-        checkInputValidity(formElement, inputElement, submitButton, inputArray, inactiveButtonClass, inputErrorClass, errorClass);
+        checkInputValidity(formElement, inputElement, submitButton, inputArray, inputErrorClass, errorClass);
       });
     });
   };
@@ -40,7 +42,7 @@ function enableValidation (parametrs) {
       evt.preventDefault();
     });
     const submitButton = formElement.querySelector(parametrs.submitButtonSelector)
-      setEventListeners(formElement, submitButton, parametrs.inputSelector, parametrs.inactiveButtonClass, parametrs.inputErrorClass, parametrs.errorClass);
+      setEventListeners(formElement, submitButton, parametrs.inputSelector, parametrs.inputErrorClass, parametrs.errorClass);
   });
   };
 
@@ -48,6 +50,5 @@ function enableValidation (parametrs) {
   formSelector: '.popup__form',
   inputSelector: '.popup__form-input',
   submitButtonSelector: '.popup__form-button',
-  inactiveButtonClass: 'popup__form-button_invalid',
   inputErrorClass: 'popup__form-input_invalid',
   errorClass: 'popup__error'});

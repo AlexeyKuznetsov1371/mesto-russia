@@ -22,3 +22,10 @@
     line-height: 22px;
 }
 }
+
+.popup__form-button:disabled {
+    opacity: 0.2;
+    background: none;
+    border: 1px solid;
+    color: #000000;
+}

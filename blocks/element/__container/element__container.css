@@ -1,4 +1,8 @@
 .element__container {
     position: relative;
     object-fit: cover;
+    width: 282px;
+    height: 282px;
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 0 0;
 }

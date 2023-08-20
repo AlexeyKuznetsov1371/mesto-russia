@@ -37,8 +37,10 @@ function createCard(item) {
     const likeButton = cardElement.querySelector(".element__info-button");
     const textElement = cardElement.querySelector(".element__info-text");
 
+    
     textElement.textContent = item.name;
     imageElement.src = item.link;
+    imageElement.alt = item.name;
 
 
     likeButton.addEventListener("click", function () {
@@ -81,9 +83,10 @@ function handleSubmitAdd(e) {
     renderCard({ name: cardNameInput.value, link: cardLinkInput.value }, elements, "prepend");
     closePopup(popupAddCard);
     formCardElement.reset();
+    disabledButton.setAttribute("disabled", true);
+    
 }
 formCardElement.addEventListener("submit", handleSubmitAdd);
-
   
 function handleSubmitEdit(e) {
     e.preventDefault();
@@ -104,6 +107,8 @@ editButton.addEventListener("click", function () {
 
 profileAddButton.addEventListener("click", function () {
     openPopup(popupAddCard);
+    const disabledButton = popupAddCard.querySelector(".popup__form-button");
+    disabledButton.setAttribute("disabled", true);
 });
 
 
