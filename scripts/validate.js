@@ -17,8 +17,10 @@ const checkInputValidity = (formElement, inputElement, submitButton, inputArray,
       hideInputError(formElement, inputElement, inputErrorClass, errorClass);
     }
     if (inputArray.some((input) => !input.validity.valid)) {
+        submitButton.setAttribute("disabled", true);
         submitButton.classList.add(inactiveButtonClass);
     } else {
+        submitButton.removeAttribute("disabled");
         submitButton.classList.remove(inactiveButtonClass);
     }
   };
