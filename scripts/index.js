@@ -82,9 +82,7 @@ function handleSubmitAdd(e) {
     e.preventDefault();
     renderCard({ name: cardNameInput.value, link: cardLinkInput.value }, elements, "prepend");
     closePopup(popupAddCard);
-    formCardElement.reset();
-    disabledButton.setAttribute("disabled", true);
-    
+    formCardElement.reset();  
 }
 formCardElement.addEventListener("submit", handleSubmitAdd);
   
