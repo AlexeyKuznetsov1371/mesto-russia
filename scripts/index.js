@@ -19,7 +19,7 @@ const cardLinkInput = document.querySelector("#popup-input-card-link");
 const [closeEditPopup, closePopupAddCard, closePopupImage] = closePopupButtons;
 const popupImageContainer = document.querySelector(".popup__image-container");
 const popupTitleImage = document.querySelector(".popup__title-image");
-
+const cardSubmitButton = document.querySelector("#popup_add_card-button");
 
 
 
@@ -105,8 +105,7 @@ editButton.addEventListener("click", function () {
 
 profileAddButton.addEventListener("click", function () {
     openPopup(popupAddCard);
-    const disabledButton = popupAddCard.querySelector(".popup__form-button");
-    disabledButton.setAttribute("disabled", true);
+    cardSubmitButton.setAttribute("disabled", true);
 });
 
 
